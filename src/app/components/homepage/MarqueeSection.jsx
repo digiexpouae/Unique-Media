@@ -78,7 +78,7 @@ function MarqueeRow({ logos, direction = "left", speed = 30 }) {
           >
             <Image
               src={logo.src}
-              alt=""
+              alt="logo"
               width={120}
               height={48}
               className="object-contain max-h-10 transition-all duration-300"

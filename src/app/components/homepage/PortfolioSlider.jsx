@@ -7,39 +7,39 @@ import Link from "next/link";
 const SLIDES = [
   {
     id: 1,
-    image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80",
+    image: "/assets/dubai-civil-association.JPG",
     brand: "Gitex Pure Storage 2025",
     videoId: "1168382303",
   },
   {
     id: 2,
-    image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80",
+    image: "/assets/dubai-civil-association.JPG",
     brand: "Dubai Civil Aviation Authority ",
     videoId: "1160154730",
   },
   {
     id: 3,
-    image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80",
+    image: "/assets/d-marian.JPG",
     brand: "D-Marin",
     videoId: "1160149849",
   },
   {
     id: 4,
-    image: "https://images.unsplash.com/photo-1445205170230-053b83016050?w=600&q=80",
+    image: "/assets/gulf_food.JPG",
     brand: "Gulf food GARIBSONS 2025",
     videoId: "1084592465",
   },
   {
     id: 5,
-    image: "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=600&q=80",
+    image: "/assets/cisco.JPG",
     brand: "Cisco at Gisec 2025",
     videoId: "1160154730",
   },
   {
     id: 6,
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&q=80",
-    brand: "Meridian",
-    videoId: "1160154730",
+    image: "/assets/riyadh-airport.JPG",
+    brand: " Riyadh Airport",
+    videoId: "1160147528",
   },
 ];
 
@@ -119,9 +119,9 @@ export default function PortfolioSlider() {
                   </div>
 
                   {/* Brand pill */}
-                  <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm rounded-full px-3 py-1">
+                  {/* <div className="absolute bottom-3 left-3 bg-black/60 backdrop-blur-sm rounded-full px-3 py-1">
                     <span className="text-white text-[10px] font-semibold tracking-widest uppercase">{s.brand}</span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
@@ -142,7 +142,7 @@ export default function PortfolioSlider() {
         {/* View More */}
         <div className="flex justify-center mt-12">
           <Link
-            href="/portfolio"
+            href="https://vimeo.com/uniquemediasolution"
             className="inline-block px-8 py-2.5 rounded-full bg-black text-white text-xs md:text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors duration-200"
           >
             View More

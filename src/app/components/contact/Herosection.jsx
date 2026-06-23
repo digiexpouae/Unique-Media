@@ -79,7 +79,7 @@ export default function ContactSection() {
   };
 
   const inputBase =
-    "w-full rounded-full border border-slate-200 bg-white px-6 py-3.5 text-sm text-slate-700 placeholder-slate-400 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-blue-100";
+    "w-full rounded-full border border-slate-200 bg-white px-6 py-3.5 text-sm text-slate-700 placeholder-slate-400 outline-none transition focus:border-blue-400 focus:ring-2 focus:ring-black-100";
 
   return (
     <section className="relative w-full overflow-hidden bg-black py-34">
@@ -111,7 +111,7 @@ export default function ContactSection() {
               </p>
             )}
 
-            <form onSubmit={handleSubmit} className="space-y-4">
+            <form  className="space-y-4">
               <input
                 type="text"
                 name="name"
@@ -194,7 +194,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={status === "loading"}
-                  className="rounded-full bg-[var(--color-primary)] px-10 py-3 text-sm font-semibold text-white transition active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
+                  className="rounded-full bg-white/30 hover:bg-white/20 cursor-pointer px-10 py-3 text-sm font-semibold text-white transition active:scale-[0.98] disabled:cursor-not-allowed disabled:opacity-60"
                 >
                   {status === "loading" ? "Sending…" : "Submit"}
                 </button>
