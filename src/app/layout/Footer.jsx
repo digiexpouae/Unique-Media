@@ -9,8 +9,12 @@ const services = [
   "CORPORATE VIDEOS",
 ];
 
-const companyLinks = ["Home", "About Us", "Services", "Portfolio", "Contact Us"];
-
+const NAV_LINKS = [
+  { label: "Home",      href: "/" },
+  { label: "About",     href: "/#about" },
+  { label: "Services",  href: "/#services" },
+  { label: "Portfolio", href: "/#portfolio" },
+];
 export default function Footer() {
   const [email, setEmail] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -121,13 +125,13 @@ export default function Footer() {
             Company
           </p>
           <ul className="space-y-2">
-            {companyLinks.map((link) => (
-              <li key={link}>
+            {NAV_LINKS.map((link) => (
+              <li key={link.label}>
                 <a
-                  href="#"
+                  href={link.href}
                   className="text-[10px] font-semibold tracking-wider text-gray-700 uppercase hover:text-gray-900 relative inline-block after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-gray-900 after:transition-all after:duration-300 hover:after:w-full"
                 >
-                  {link}
+                  {link.label}
                 </a>
               </li>
             ))}
