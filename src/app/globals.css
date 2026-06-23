@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
+
 @theme {
   --font-sans: "Nexa", system-ui, sans-serif;
+  --font-mono: "Nexa", system-ui, sans-serif;  /* kills Geist Mono too */
+  --default-font-family: "Nexa", system-ui, sans-serif;
 }
 
 /* ── Nexa Extra Light ── */

@@ -3,13 +3,14 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion, AnimatePresence } from "framer-motion";
 
 const ITEMS = [
-  { id: 1, src: "/assets/background-image.png", alt: "Black Coffee Event" },
-  { id: 2, src: "/assets/abt-map.png",          alt: "Daily Stoic" },
-  { id: 3, src: "/assets/background-image.png", alt: "Project Three" },
-  { id: 4, src: "/assets/abt-map.png",          alt: "Project Four" },
-  { id: 5, src: "/assets/background-image.png", alt: "Project Five" },
+  { id: 1, src: "/assets/ev-ferjan.webp", alt: "Black Coffee Event" },
+  { id: 2, src: "/assets/ev-gems.webp",          alt: "Daily Stoic" },
+  { id: 3, src: "/assets/ev-international.webp", alt: "Project Three" },
+  { id: 4, src: "/assets/ev-souq-ramdan.webp",          alt: "Project Four" },
+  { id: 5, src: "/assets/ev-gems.webp", alt: "Project Five" },
 ];
 
 function mod(n, m) {
@@ -21,9 +22,21 @@ export default function ResultsSection() {
   const total = ITEMS.length;
   const prev  = mod(current - 1, total);
   const next  = mod(current + 1, total);
+  const [direction, setDirection] = useState(0); // 1. Add this!
+  
+  
 
+
+  const cardVariants = {
+    initial: (dir) => ({ x: dir > 0 ? 100 : -100, opacity: 0 }),
+    animate: { x: 0, opacity: 1 },
+    exit: (dir) => ({ x: dir > 0 ? -100 : 100, opacity: 0 }),
+  };
+  // Replace your old cardVariants with this:
+
+ 
   return (
-    <section id="portfolio" className="relative bg-white w-full py-14 md:py-24 overflow-hidden">
+    <section  className="relative bg-white w-full py-14 md:py-24 overflow-hidden">
 
       {/* ── Headline ── */}
     
@@ -36,37 +49,43 @@ export default function ResultsSection() {
        */}
       <div className="relative w-full h-[260px] sm:h-[360px] md:h-[480px] flex items-center justify-center">
 
+
         {/* Left card */}
-        <div
-          onClick={() => setCurrent(prev)}
-          className="
-            absolute cursor-pointer overflow-hidden shadow-xl
-            rounded-2xl md:rounded-3xl
-            transition-transform duration-300 hover:scale-[1.02]
-            left-[-20px]  w-[150px] h-[210px]
-            sm:left-[-30px] sm:w-[230px] sm:h-[310px]
-            md:left-[-50px] md:w-[400px] md:h-[460px]
-          "
-          style={{ transform: "rotate(-8deg)", transformOrigin: "bottom right" }}
-        >
-          <Image src={ITEMS[prev].src} alt={ITEMS[prev].alt} fill className="object-cover" />
-        </div>
+      {/* Left card */}
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.div
+            key={prev}
+            custom={direction}
+            variants={cardVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            onClick={handlePrev}
+            className="absolute cursor-pointer shadow-xl rounded-2xl md:rounded-3xl left-[-20px] sm:left-[-30px] md:left-[-50px] w-[150px] h-[210px] sm:w-[230px] sm:h-[310px] md:w-[400px] md:h-[460px]"
+            style={{ transform: "rotate(-8deg)", transformOrigin: "bottom right" }}
+          >
+            <Image src={ITEMS[prev].src} alt={ITEMS[prev].alt} fill className="object-cover" />
+          </motion.div>
+        </AnimatePresence>
 
         {/* Right card */}
-        <div
-          onClick={() => setCurrent(next)}
-          className="
-            absolute cursor-pointer overflow-hidden shadow-xl
-            rounded-2xl md:rounded-3xl
-            transition-transform duration-300 hover:scale-[1.02]
-            right-[-20px]  w-[150px] h-[210px]
-            sm:right-[-30px] sm:w-[230px] sm:h-[310px]
-            md:right-[-50px] md:w-[400px] md:h-[460px]
-          "
-          style={{ transform: "rotate(8deg)", transformOrigin: "bottom left" }}
-        >
-          <Image src={ITEMS[next].src} alt={ITEMS[next].alt} fill className="object-cover" />
-        </div>
+        <AnimatePresence initial={false} custom={direction}>
+          <motion.div
+            key={next}
+            custom={direction}
+            variants={cardVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.5, ease: "easeInOut" }}
+            onClick={handleNext}
+            className="absolute cursor-pointer shadow-xl rounded-2xl md:rounded-3xl right-[-20px] sm:right-[-30px] md:right-[-50px] w-[150px] h-[210px] sm:w-[230px] sm:h-[310px] md:w-[400px] md:h-[460px]"
+            style={{ transform: "rotate(8deg)", transformOrigin: "bottom left" }}
+          >
+            <Image src={ITEMS[next].src} alt={ITEMS[next].alt} fill className="object-cover" />
+          </motion.div>
+        </AnimatePresence>
 
         {/* Centre — View More */}
         <div className="absolute z-10 left-1/2 -translate-x-1/2">

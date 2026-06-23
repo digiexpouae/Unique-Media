@@ -25,7 +25,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-white border-t border-gray-100 py-10 px-6 md:px-12">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-6 items-start">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 justify-between md:gap-6 items-start">
 
         {/* Col 1 — Logo */}
         <div className="flex items-center gap-2 group cursor-pointer">
@@ -40,8 +40,8 @@ export default function Footer() {
         </div>
 
         {/* Col 2 — CTA + Email */}
-        <div className="md:col-span-1">
-          <h2 className="text-[13px] font-black tracking-wider text-gray-900 uppercase leading-snug mb-5">
+        <div className="md:w-1/3">
+          <h2 className="text-2xl font-black tracking-tight text-gray-900 uppercase leading-snug mb-5">
             SIGN UP TO HARNESS THE
             <br />
             POWER OF UNIQUE MEDIA.
@@ -49,7 +49,7 @@ export default function Footer() {
 
           {/* Email input row */}
           <div
-            className={`flex items-center border transition-all duration-300 ${
+            className={`flex items-center  gap-4 transition-all duration-300 ${
               focused
                 ? "border-gray-900 shadow-[0_0_0_2px_rgba(0,0,0,0.06)]"
                 : "border-gray-300"
@@ -63,11 +63,11 @@ export default function Footer() {
               onFocus={() => setFocused(true)}
               onBlur={() => setFocused(false)}
               onKeyDown={(e) => e.key === "Enter" && handleSubmit()}
-              className="flex-1 px-3 py-2.5 text-[11px] tracking-widest text-gray-700 placeholder-gray-400 outline-none bg-transparent font-medium uppercase"
+              className="flex-1 px-3 py-2.5 text-[11px] tracking-widest text-gray-700 placeholder-gray-400 outline-none border bg-transparent font-medium uppercase"
             />
             <button
               onClick={handleSubmit}
-              className="px-4 py-2.5 bg-white border-l border-gray-300 hover:bg-gray-900 transition-colors duration-300 group/btn"
+              className="px-4 py-2.5 bg-black  transition-colors duration-300 group/btn"
               aria-label="Subscribe"
             >
               {submitted ? (
@@ -84,7 +84,7 @@ export default function Footer() {
                 >
                   <path
                     d="M2 8H14M14 8L9 3M14 8L9 13"
-                    stroke="#111111"
+                    stroke="white"
                     strokeWidth="1.5"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -97,7 +97,7 @@ export default function Footer() {
         </div>
 
         {/* Col 3 — Services */}
-        <div>
+        <div className="  ">
           <p className="text-[9px] font-bold tracking-[0.2em] text-gray-400 uppercase mb-3">
             Services
           </p>
@@ -116,7 +116,7 @@ export default function Footer() {
         </div>
 
         {/* Col 4 — Company */}
-        <div>
+        <div className="">
           <p className="text-[9px] font-bold tracking-[0.2em] text-gray-400 uppercase mb-3">
             Company
           </p>
@@ -133,7 +133,6 @@ export default function Footer() {
             ))}
           </ul>
         </div>
-
       </div>
     </footer>
   );
