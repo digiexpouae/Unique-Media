@@ -37,9 +37,9 @@ export default function TestimonialSlider() {
 
   return (
     <div className="min-h-screen bg-[#1a1a1a] flex items-center justify-center px-6">
-      <div className="w-full max-w-5xl flex items-center gap-12 md:gap-20">
+      <div className="w-full  flex  flex-col md:flex-row items-center gap-12 md:justify-between md:gap-20">
         {/* Left — circular badge */}
-        <div className="hidden md:flex flex-shrink-0 items-center justify-center relative w-48 h-48">
+        <div className=" flex flex-shrink-0 items-center justify-center relative w-full h-54 md:w-1/3 md:h-72">
           {/* Rotating text ring */}
           <svg
             viewBox="0 0 200 200"
@@ -97,6 +97,8 @@ export default function TestimonialSlider() {
               height="40"
               viewBox="0 0 52 40"
               fill="none"
+                className="rotate-180"
+
               xmlns="http://www.w3.org/2000/svg"
             >
               {/* Two bold quote marks */}

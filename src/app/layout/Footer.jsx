@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-
+import Image from "next/image";
 const services = [
   "LIVE STREAM",
   "SOCIAL MEDIA",
@@ -29,25 +29,14 @@ export default function Footer() {
 
         {/* Col 1 — Logo */}
         <div className="flex items-center gap-2 group cursor-pointer">
-          <div className="flex flex-col leading-none select-none">
-            <span className="text-[15px] font-black tracking-widest text-gray-900 uppercase transition-colors duration-300 group-hover:text-gray-600">
-              UNIQUE
-            </span>
-            <span className="text-[7px] font-medium tracking-[0.25em] text-gray-400 uppercase mt-0.5">
-              MEDIA SOLUTION
-            </span>
+          <div className="relative h-[60px] w-[180px]">
+          <Image src={"/assets/unique-logo.png"} 
+          fill
+          alt="logo"
+          className="object-cover"
+          />
           </div>
-          {/* Arrow chevron mark */}
-          <svg
-            width="28"
-            height="28"
-            viewBox="0 0 28 28"
-            fill="none"
-            className="transition-transform duration-500 group-hover:translate-x-1"
-          >
-            <polygon points="0,0 18,14 0,28" fill="#C8C8C8" />
-            <polygon points="10,0 28,14 10,28" fill="#E8E8E8" />
-          </svg>
+       
         </div>
 
         {/* Col 2 — CTA + Email */}

@@ -115,13 +115,13 @@ export default function PortfolioSlider() {
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-extralight text-black uppercase leading-none tracking-tight mt-1">
             Scale Brands
           </h2>
-          <p className="mt-4 text-sm max-w-xs mx-auto text-black leading-snug">
+          <p className="mt-4 text-sm max-w-xs mx-auto text-sm md:text-base text-black leading-snug">
             <span className="">A collection of projects we helped </span>
             <span className="">accelerate years ahead</span>
           </p>
           <Link
             href="/portfolio"
-            className="inline-block mt-5 px-7 py-2 rounded-full bg-black text-white text-xs font-medium tracking-tight hover:bg-gray-800 transition-colors duration-200"
+            className="inline-block mt-5 px-7 py-2 rounded-full bg-black text-white text-xs md:text-sm font-medium tracking-wide hover:bg-gray-800 transition-colors duration-200"
           >
             View More
           </Link>
