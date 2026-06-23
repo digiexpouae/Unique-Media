@@ -50,14 +50,13 @@ function MarqueeRow({ logos, direction = "left", speed = 30 }) {
         {items.map((logo, i) => (
           <div
             key={i}
-            className="flex items-center justify-center shrink-0 h-12 w-32 md:w-36"
+            className="flex  relative items-center justify-center shrink-0 h-22 w-32 md:w-44"
           >
             <Image
               src={logo.src}
               alt={logo.alt}
-              width={120}
-              height={48}
-              className="object-contain max-h-10 transition-all duration-300"
+             fill
+              className="object-contain  transition-all duration-300"
             />
           </div>
         ))}
@@ -74,14 +73,13 @@ function MarqueeRow({ logos, direction = "left", speed = 30 }) {
         {items.map((logo, i) => (
           <div
             key={i}
-            className="flex items-center justify-center shrink-0 h-12 w-32 md:w-36"
+            className="flex items-center relative justify-center shrink-0 h-22 w-32 md:w-44"
           >
             <Image
               src={logo.src}
               alt="logo"
-              width={120}
-              height={48}
-              className="object-contain max-h-10 transition-all duration-300"
+              fill
+              className="object-contain transition-all duration-300"
             />
           </div>
         ))}

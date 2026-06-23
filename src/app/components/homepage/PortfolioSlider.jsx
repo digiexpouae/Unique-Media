@@ -110,7 +110,7 @@ export default function PortfolioSlider() {
                   />
 
                   {/* Hover overlay with play button */}
-                  <div className="absolute inset-0 bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="absolute inset-0 bg-black/30 transition-opacity duration-300 flex items-center justify-center">
                     <div className="w-16 h-16 rounded-full bg-white/90 flex items-center justify-center shadow-lg">
                       <svg viewBox="0 0 24 24" fill="none" className="w-7 h-7 ml-1">
                         <polygon points="6,4 20,12 6,20" fill="black"/>
