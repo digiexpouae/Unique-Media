@@ -1,0 +1,7 @@
+{
+  "env": {
+        "ANTHROPIC_BASE_URL": "https://googleapis.com",
+    "ANTHROPIC_AUTH_TOKEN": "AIzaSyBiHoc1Y-jawAive_WPGzjJqnqm05EzYSw",
+    "ANTHROPIC_API_KEY": "dummy",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "gemini-2.5-flash"}
+  }

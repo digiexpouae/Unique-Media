@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nexa", system-ui, sans-serif;
+}
+
+/* ── Nexa Extra Light ── */
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa-ExtraLight.ttf") format("truetype");
+  font-weight: 200 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Nexa Heavy ── */
+@font-face {
+  font-family: "Nexa";
+  src: url("/fonts/Nexa-Heavy.ttf") format("truetype");
+  font-weight: 500 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ── Base ── */
+html {
+  font-family: var(--font-sans);
+}
+
+body {
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  color: red;
+
+}
+
+/* ── Marquee Animations ── */
+@keyframes marquee-left {
+  from { transform: translateX(0%); }
+  to   { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  from { transform: translateX(-50%); }
+  to   { transform: translateX(0%); }
+}
+
+.animate-marquee-left {
+  animation: marquee-left var(--marquee-speed, 10s) linear infinite;
+}
+
+.animate-marquee-right {
+  animation: marquee-right var(--marquee-speed, 10s) linear infinite;
+}
