@@ -7,13 +7,13 @@ import Link from "next/link";
 const SLIDES = [
   {
     id: 1,
-    image: "/assets/dubai-civil-association.JPG",
+    image: "/assets/gitex.JPG",
     brand: "Gitex Pure Storage 2025",
     videoId: "1168382303",
   },
   {
     id: 2,
-    image: "/assets/dubai-civil-association.JPG",
+    image: "/assets/dubai-civil.JPG",
     brand: "Dubai Civil Aviation Authority ",
     videoId: "1160154730",
   },

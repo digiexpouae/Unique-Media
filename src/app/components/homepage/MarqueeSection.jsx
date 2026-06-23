@@ -25,9 +25,9 @@ const ROW_ONE = [
 
 const ROW_TWO = [
   { src: "/assets/logos/Cisco-Logo.png", alt: "Cisco" },
-  { src: "/assets/logos/dubai-civil.JPG", alt: "Dubai Civil Aviation Authority" },
+  { src: "/assets/logos/Dubai-Civil-Aviation-Authority.png", alt: "Dubai Civil Aviation Authority" },
   { src: "/assets/logos/D-marin-Jumeirah-Marsa-Al-Arab.png", alt: "Marriott Jumeirah" },
-  { src: "/assets/logos/dubai-civil-association.JPG", alt: "Dubai Economy and Tourism" },
+  { src: "/assets/logos/Dubai-Civil-Aviation-Authority.png", alt: "Dubai Economy and Tourism" },
   { src: "/assets/logos/Elie-Saab.png", alt: "EGMA" },
   { src: "/assets/logos/friesland-Campina.png", alt: "Unilever" },
   { src: "/assets/logos/Gulf_Business_Machines_logo_2015.png", alt: "Elie Saab" },
