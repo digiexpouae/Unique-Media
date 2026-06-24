@@ -36,7 +36,8 @@ export default function TestimonialSlider() {
   const { quote, name, title } = testimonials[current];
 
   return (
-    <div className="min-h-screen bg-[#1a1a1a] flex items-center justify-center px-6">
+    <div className="min-h-screen bg-[#1a1a1a] flex items-center justify-center px-6"
+    style={{fontFamily:"Montserrat"}}>
       <div className="w-full  flex  flex-col md:flex-row items-center gap-12 md:justify-between md:gap-20">
         {/* Left — circular badge */}
         <div className=" flex flex-shrink-0 items-center justify-center relative w-full h-54 md:w-1/3 md:h-72">

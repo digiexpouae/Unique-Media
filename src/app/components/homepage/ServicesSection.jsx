@@ -15,10 +15,10 @@ const SERVICES = [
   },
   {
     id: 2,
-    title: "Social Media Content",
+    title: "Event Content Production",
     description: "We create engaging photo and video content designed specifically for social media platforms.",
     dark: false,
-    icon:"/assets/social.png"
+    icon:"/assets/event_content_production.png"
   },
   {
     id: 3,

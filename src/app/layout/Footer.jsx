@@ -28,7 +28,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white border-t border-gray-100 py-10 px-6 md:px-12">
+    <footer className="bg-white border-t border-gray-100 py-10 px-6 md:px-12"     style={{fontFamily:"Montserrat"}}>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 justify-between md:gap-6 items-start">
 
         {/* Col 1 — Logo */}
@@ -45,7 +45,7 @@ export default function Footer() {
 
         {/* Col 2 — CTA + Email */}
         <div className="md:w-1/3">
-          <h2 className="text-2xl font-black tracking-tight text-gray-900 uppercase leading-snug mb-5">
+          <h2 className="text-2xl font-semibold tracking-tight text-gray-900 uppercase leading-snug mb-5">
             SIGN UP TO HARNESS THE
             <br />
             POWER OF UNIQUE MEDIA.
@@ -102,7 +102,7 @@ export default function Footer() {
 
         {/* Col 3 — Services */}
         <div className="  ">
-          <p className="text-[9px] font-bold tracking-[0.2em] text-gray-400 uppercase mb-3">
+          <p className="text-xs font-medium  uppercase mb-3">
             Services
           </p>
           <ul className="space-y-2">
@@ -110,7 +110,7 @@ export default function Footer() {
               <li key={s}>
                 <a
                   href="#"
-                  className="text-[10px] font-semibold tracking-wider text-gray-700 uppercase hover:text-gray-900 hover:translate-x-0.5 inline-block transition-all duration-200"
+                  className="text-[10px] font-medium  uppercase hover:text-gray-900 hover:translate-x-0.5 inline-block transition-all duration-200"
                 >
                   {s}
                 </a>
@@ -121,7 +121,7 @@ export default function Footer() {
 
         {/* Col 4 — Company */}
         <div className="">
-          <p className="text-[9px] font-bold tracking-[0.2em] text-gray-400 uppercase mb-3">
+          <p className="text-xs font-medium  uppercase mb-3">
             Company
           </p>
           <ul className="space-y-2">
@@ -129,7 +129,7 @@ export default function Footer() {
               <li key={link.label}>
                 <a
                   href={link.href}
-                  className="text-[10px] font-semibold tracking-wider text-gray-700 uppercase hover:text-gray-900 relative inline-block after:absolute after:bottom-0 after:left-0 after:h-px after:w-0 after:bg-gray-900 after:transition-all after:duration-300 hover:after:w-full"
+                  className="text-[10px] font-medium tracking-tight   uppercase  relative inline-block hover:translate-x-0.5 transition-all duration-200"
                 >
                   {link.label}
                 </a>
