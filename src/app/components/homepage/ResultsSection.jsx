@@ -58,7 +58,7 @@ console.log("next item",ITEMS[next].src)
           className={`
             absolute cursor-pointer overflow-hidden shadow-xl
             rounded-2xl md:rounded-3xl
-   transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] hover:scale-[1.02]
+   transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] hover:scale-[1.02]
             left-[-20px] w-[150px] h-[210px]
             sm:left-[-30px] sm:w-[230px] sm:h-[310px]
             md:left-[-50px] md:w-[400px] md:h-[460px]
@@ -76,7 +76,7 @@ console.log("next item",ITEMS[next].src)
           className={`
             absolute cursor-pointer overflow-hidden shadow-xl
             rounded-2xl md:rounded-3xl
-   transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] hover:scale-[1.02]
+   transition-all duration-300 ease-[cubic-bezier(0.25,1,0.5,1)] hover:scale-[1.02]
             right-[-20px] w-[150px] h-[210px]
             sm:right-[-30px] sm:w-[230px] sm:h-[310px]
             md:right-[-50px] md:w-[400px] md:h-[460px]
