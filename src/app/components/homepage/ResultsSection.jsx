@@ -5,11 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 
 const ITEMS = [
-  { id: 1, src: "/assets/ev-ferjan.webp", alt: "Black Coffee Event" },
-  { id: 2, src: "/assets/ev-gems.webp", alt: "Daily Stoic" },
-  { id: 3, src: "/assets/ev-international.webp", alt: "Project Three" },
-  { id: 4, src: "/assets/ev-souq-ramdan.webp", alt: "Project Four" },
-  { id: 5, src: "/assets/ev-gems.webp", alt: "Project Five" },
+  { id: 1, src:"/assets/eventsCovered/CAMZ8828.webp", alt: "CAMZ8828.webp" },
+  { id: 2, src:"/assets/eventsCovered/1445-1058.webp", alt: "1445-1058.webp" },
+  { id: 3, src:"/assets/eventsCovered/1437-0342.webp", alt: "1437-0342.webp" },
+  { id: 4, src:"/assets/eventsCovered/1299D3-1073.webp", alt: "1299D3-1073.webp" },
+    { id: 5, src:"/assets/eventsCovered/CAMY5566.webp", alt: "CAMY5566.webp" },
+  { id:6, src:"/assets/eventsCovered/CAMY5548.webp", alt: "CAMY5548.webp" },
+  { id: 7, src:"/assets/eventsCovered/DSC00029.webp", alt: "DSC00029.webp" },
 ];
 
 function mod(n, m) {
@@ -17,40 +19,52 @@ function mod(n, m) {
 }
 
 export default function ResultsSection() {
-  const [current, setCurrent] = useState(0);
-  const [direction, setDirection] = useState(null);
-
-  const total = ITEMS.length;
-  const prev = mod(current - 1, total);
-  const next = mod(current + 1, total);
-
- const [animSide, setAnimSide] = useState(null);
-
+ const total=ITEMS.length;
+ const [current, setCurrent] = useState(0);
+const [animSide, setAnimSide] = useState(null);
+const [prevImg, setPrevImg] = useState(mod(-1, total)); // starts at last item
+const [nextImg, setNextImg] = useState(1);              // starts at second item
 const goPrev = () => {
   setAnimSide("left");
-  setCurrent((c) => mod(c - 1, total));
-  setTimeout(() => setAnimSide(null), 250);
+    const newCurrent = mod(current - 1, total);
+    setCurrent(newCurrent);
+    setPrevImg(mod(newCurrent - 1, total)); // ✅ only left updates
+    setTimeout(() => {
+
+    setAnimSide(null);
+  }, 150);
 };
 
 const goNext = () => {
   setAnimSide("right");
-  setCurrent((c) => mod(c + 1, total));
-  setTimeout(() => setAnimSide(null), 250);
+    const newCurrent = mod(current + 1, total);
+    setCurrent(newCurrent);
+  setNextImg(mod(newCurrent + 1, total)); // ✅ was using stale current, now newCurrent
+      setTimeout(() => {
+    setAnimSide(null);
+  }, 150);
 };
+
+// ✅ use state directly, no derivation from current
+const prev = prevImg;
+const next = nextImg;
+console.log("next item",ITEMS[next].src)
+
   return (
     <section className="relative bg-white w-full py-14 md:py-24 overflow-hidden">
       <div className="relative w-full h-[260px] sm:h-[360px] md:h-[480px] flex items-center justify-center">
         {/* Left card */}
         <div
-          onClick={goPrev}
           className={`
             absolute cursor-pointer overflow-hidden shadow-xl
             rounded-2xl md:rounded-3xl
-            transition-all duration-300 hover:scale-[1.02]
+   transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] hover:scale-[1.02]
             left-[-20px] w-[150px] h-[210px]
             sm:left-[-30px] sm:w-[230px] sm:h-[310px]
             md:left-[-50px] md:w-[400px] md:h-[460px]
-            ${animSide === "prev" ? "opacity-0 " : "opacity-100"}
+ ${animSide === "left" 
+  ? "opacity-0 " 
+  : "opacity-100 "}
           `}
           style={{ transform: "rotate(-8deg)", transformOrigin: "bottom right" }}
         >
@@ -59,15 +73,14 @@ const goNext = () => {
 
         {/* Right card */}
         <div
-          onClick={goNext}
           className={`
             absolute cursor-pointer overflow-hidden shadow-xl
             rounded-2xl md:rounded-3xl
-            transition-all duration-300 hover:scale-[1.02]
+   transition-all duration-500 ease-[cubic-bezier(0.25,1,0.5,1)] hover:scale-[1.02]
             right-[-20px] w-[150px] h-[210px]
             sm:right-[-30px] sm:w-[230px] sm:h-[310px]
             md:right-[-50px] md:w-[400px] md:h-[460px]
-            ${animSide === "next" ? "opacity-0 " : "opacity-100"}
+            // ${animSide === "right" ? "opacity-0 " : "opacity-100"}
           `}
           style={{ transform: "rotate(8deg)", transformOrigin: "bottom left" }}
         >
@@ -106,7 +119,7 @@ const goNext = () => {
           </svg>
         </button>
 
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           {ITEMS.map((_, i) => (
             <button
               key={i}
@@ -121,7 +134,7 @@ const goNext = () => {
               }`}
             />
           ))}
-        </div>
+        </div> */}
 
         <button
           onClick={goNext}
