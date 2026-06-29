@@ -102,7 +102,7 @@ export default function HeroSection() {
 
           {/* Secondary — Our Works */}
           <Link
-            href="/portfolio"
+            href="/#portfolio"
             className="inline-flex items-center gap-2.5 bg-white/60 hover:bg-white/50 text-white text-xs font-bold uppercase tracking-tight px-8 py-3 rounded-full  transition-colors duration-200"
           >
             Our Works

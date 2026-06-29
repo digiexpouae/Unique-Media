@@ -16,7 +16,7 @@ const SERVICES = [
     description:
       "We provide reliable live streaming and rebroadcast services that bring your event to a wider audience in real time.",
     dark: true,
-    icon: "/assets/live-gray.png",
+    icon: "/assets/live2.png",
   },
   {
     id: 2,
@@ -67,13 +67,12 @@ export default function ServicesSection() {
               return (
                <button
   key={s.id}
-  type="button"
   onClick={() => setExpanded(isOpen ? null : s.id)}
   className={`
     text-left rounded-4xl p-6 sm:p-8 flex flex-col items-center justify-between text-center w-full
-    transition-all duration-300 cursor-pointer bg-gray-100 hover:bg-black hover:text-white text-gray-400
-  h-[300px]"
-    ${isOpen && "min-h-[350px]" }
+    cursor-pointer bg-gray-100 hover:bg-black hover:text-white text-gray-400
+    transition-all duration-500 ease-in-out overflow-hidden
+    ${isOpen ? "min-h-[350px]" : "min-h-[300px]"}
   `}
 >
                   <div className="mb-4">

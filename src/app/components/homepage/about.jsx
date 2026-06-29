@@ -86,7 +86,7 @@ export default function AboutSection() {
 
           {/* Right — Description text */}
           <div className="flex-1  ">
-            <p className="text-2xl font-semibold leading-snug text-gray-900 text-right">
+            <p className="text-md md:text-2xl font-semibold leading-snug text-gray-900 text-right">
               Unique Media Solutions creates{" "}
               <span className="font-bold text-black">high-quality event media</span>{" "}
               <span className="font-extralight">
