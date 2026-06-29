@@ -101,7 +101,7 @@ export default function ContactSection() {
           <div className="relative">
             {status === "success" && (
               <p className="mb-4 text-center font-medium text-green-600">
-                ✅ Your message was sent successfully!
+                ✅ Form submitted successfully!
               </p>
             )}
 
@@ -111,7 +111,7 @@ export default function ContactSection() {
               </p>
             )}
 
-            <form  className="space-y-4">
+            <form onSubmit={handleSubmit} className="space-y-4">
               <input
                 type="text"
                 name="name"

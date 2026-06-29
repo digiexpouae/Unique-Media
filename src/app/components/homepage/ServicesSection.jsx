@@ -74,8 +74,11 @@ export default function ServicesSection() {
                   {/* Icon */}
                   <div className="mb-4">
                     <Image src={s.icon}
+                       alt={s.icon}
                   width={120}
-                  height={100}
+                  height={100
+                 
+                  }
                   /></div>
 
                   {/* Title */}

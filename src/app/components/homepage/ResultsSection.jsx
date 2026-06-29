@@ -1,24 +1,41 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-
 const ITEMS = [
-  { id: 1, src:"/assets/eventsCovered/CAMZ8828.webp", alt: "CAMZ8828.webp" },
-  { id: 2, src:"/assets/eventsCovered/1445-1058.webp", alt: "1445-1058.webp" },
-  { id: 3, src:"/assets/eventsCovered/1437-0342.webp", alt: "1437-0342.webp" },
-  { id: 4, src:"/assets/eventsCovered/1299D3-1073.webp", alt: "1299D3-1073.webp" },
-    { id: 5, src:"/assets/eventsCovered/CAMY5566.webp", alt: "CAMY5566.webp" },
-  { id:6, src:"/assets/eventsCovered/CAMY5548.webp", alt: "CAMY5548.webp" },
-  { id: 7, src:"/assets/eventsCovered/DSC00029.webp", alt: "DSC00029.webp" },
+  { id: 1, mobsrc:"/assets/eventsCovered/mb-1.webp" ,  src:"/assets/eventsCovered/CAMZ8828.webp", alt: "CAMZ8828.webp" },
+  { id: 2, mobsrc:"/assets/eventsCovered/mb-2.webp" ,  src:"/assets/eventsCovered/1445-1058.webp", alt: "1445-1058.webp" },
+  { id: 3, mobsrc:"/assets/eventsCovered/mb-3.webp" ,  src:"/assets/eventsCovered/1437-0342.webp", alt: "1437-0342.webp" },
+  { id: 4, mobsrc:"/assets/eventsCovered/mb-4.webp" ,  src:"/assets/eventsCovered/1299D3-1073.webp", alt: "1299D3-1073.webp" },
+  { id: 5, mobsrc:"/assets/eventsCovered/mb-5.webp" ,  src:"/assets/eventsCovered/CAMY5566.webp", alt: "CAMY5566.webp" },
+  { id:6,  mobsrc:"/assets/eventsCovered/mb-6.webp" , src:"/assets/eventsCovered/CAMY5548.webp", alt: "CAMY5548.webp" },
+  { id: 7, mobsrc:"/assets/eventsCovered/mb-7.jpg" ,  src:"/assets/eventsCovered/DSC00029.webp", alt: "DSC00029.webp" },
 ];
 
+ 
+  
 function mod(n, m) {
   return ((n % m) + m) % m;
 }
 
 export default function ResultsSection() {
+
+
+const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkWidth = () => setIsMobile(window.innerWidth < 768);
+
+    checkWidth();
+    window.addEventListener("resize", checkWidth);
+    return () => window.removeEventListener("resize", checkWidth);
+  }, []);
+
+
+
+  const getImageSrc = (item) => (isMobile ? item.mobsrc : item.src);
+
  const total=ITEMS.length;
  const [current, setCurrent] = useState(0);
 const [animSide, setAnimSide] = useState(null);
@@ -48,7 +65,6 @@ const goNext = () => {
 // ✅ use state directly, no derivation from current
 const prev = prevImg;
 const next = nextImg;
-console.log("next item",ITEMS[next].src)
 
   return (
     <section className="relative bg-white w-full py-14 md:py-24 overflow-hidden">
@@ -68,7 +84,7 @@ console.log("next item",ITEMS[next].src)
           `}
           style={{ transform: "rotate(-8deg)", transformOrigin: "bottom right" }}
         >
-          <Image src={ITEMS[prev].src} alt={ITEMS[prev].alt} fill className="object-cover" />
+          <Image src={getImageSrc(ITEMS[prev])} alt={getImageSrc(ITEMS[prev])} fill className="object-cover" />
         </div>
 
         {/* Right card */}
@@ -99,7 +115,7 @@ console.log("next item",ITEMS[next].src)
               Results
             </h2>
             <Link
-              href="/portfolio"
+              href="/"
               className="px-4 md:px-6 py-2 rounded-full border border-gray-300 text-xs md:text-sm text-gray-700 bg-white/90 backdrop-blur-sm hover:bg-gray-100 transition-colors duration-200 whitespace-nowrap"
             >
               View More
