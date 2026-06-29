@@ -114,12 +114,12 @@ const next = nextImg;
             <h2 className="text-2xl sm:text-5xl mb-4 md:mb-6 md:text-7xl font-light text-black leading-none uppercase tracking-tight">
               Results
             </h2>
-            <Link
+            {/* <Link
               href="/"
               className="px-4 md:px-6 py-2 rounded-full border border-gray-300 text-xs md:text-sm text-gray-700 bg-white/90 backdrop-blur-sm hover:bg-gray-100 transition-colors duration-200 whitespace-nowrap"
             >
               View More
-            </Link>
+            </Link> */}
           </div>
         </div>
       </div>
