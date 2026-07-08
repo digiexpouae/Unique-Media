@@ -90,7 +90,7 @@ function MarqueeRow({ logos, direction = "left", speed = 30 }) {
 
 export default function MarqueeSection() {
   return (
-    <section className="bg-white w-full py-10 md:py-14 overflow-hidden">
+    <section className="relative bg-white w-full py-10 md:py-14 overflow-hidden">
       {/* Fade edges */}
       <div className="relative">
         <div className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-white to-transparent" />
