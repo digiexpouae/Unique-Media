@@ -73,13 +73,13 @@ export default function AboutSection() {
              *   className="object-contain opacity-80 mt-8"
              * />
              */}
-            <div className="mt-8 w-full relative h-[260px] rounded-xl  flex items-center justify-center text-gray-300 text-sm select-none w-full">
+            <div className="mt-8 w-full relative h-[220px] md:h-[260px] rounded-xl  flex items-center justify-center text-gray-300 text-sm select-none w-full">
               {/* Map image goes here */}
             <Image
-               src="/assets/abt-map.png"
+               src="/assets/middleeast.png"
                alt="Map"
               fill
-               className="object-cover opacity-30 "
+               className="object-cover md:object-[top_20%] opacity-30 "
              />
             </div>
           </div>
@@ -88,7 +88,7 @@ export default function AboutSection() {
           <div className="flex-1  flex md:justify-end ">
             <p className="text-md md:w-[90%] md:text-2xl font-semibold leading-snug text-gray-900 text-left md:text-right">
               Unique Media Solutions creates{" "}
-              <span className="font-bold text-black">high-quality event media</span>{" "}
+              <span className="font-bold text-black">high-quality media</span>{" "}
               <span className="font-extralight">
                 that captures key moments 
                and aligns with brand storytelling.

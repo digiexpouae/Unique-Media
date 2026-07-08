@@ -3,11 +3,11 @@
 import { useState } from "react";
 
 const departments = [
-  "Corporate Events",
-  "Family Festivals",
-  "Students Festival",
-  "Tech Festival",
-  "Other",
+  " Live Stream",
+  "Event Content Production",
+  "Photography & Videos",
+  "Corporate Videos",
+  "Social Media Marketing ",
 ];
 
 export default function ContactSection() {
@@ -159,7 +159,7 @@ export default function ContactSection() {
                   }`}
                 >
                   <option value="" disabled>
-                    Select Department
+                    Select Services
                   </option>
                   {departments.map((d) => (
                     <option key={d} value={d}>

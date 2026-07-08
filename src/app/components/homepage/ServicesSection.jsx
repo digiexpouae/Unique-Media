@@ -42,6 +42,14 @@ const SERVICES = [
     dark: false,
     icon: "/assets/v.png",
   },
+  {
+    id: 5,
+    title: "Social Media Marketing ",
+    description:
+      "We create engaging social media content and marketing campaigns that grow your brand, boost engagement, and connect you with the right audience.",
+    dark: false,
+    icon: "/assets/social-media-gray.png",
+  },
 ];
 
 export default function ServicesSection() {
@@ -60,7 +68,7 @@ export default function ServicesSection() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 items-start">
+          <div className="flex flex-wrap gap-4 items-center justify-center">
             {SERVICES.map((s,index) => {
               const isOpen = expanded === s.id;
 
@@ -69,7 +77,8 @@ export default function ServicesSection() {
   key={s.id}
   onClick={() => setExpanded(isOpen ? null : s.id)}
   className={`
-    text-left rounded-4xl p-6 sm:p-8 flex flex-col items-center justify-between text-center w-full
+      flex-none w-full sm:w-[calc(50%-0.5rem)]
+    text-left rounded-4xl p-6 sm:p-8 flex flex-col items-center justify-between text-center 
     cursor-pointer bg-gray-100 hover:bg-black hover:text-white text-gray-400
     transition-all duration-500 ease-in-out overflow-hidden
     ${isOpen ? "min-h-[350px]" : "min-h-[300px]"}

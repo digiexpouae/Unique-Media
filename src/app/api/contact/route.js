@@ -37,7 +37,7 @@ Message: ${message || ''}
           <div style="max-width:640px;margin:0 auto;background:#ffffff;border-radius:16px;box-shadow:0 6px 20px rgba(0,0,0,0.08);padding:40px 32px;line-height:1.6;">
             <div style="text-align:center;margin-bottom:28px;">
               <img src="https://unique-media.vercel.app/assets/unique-logo.png" alt="Unique Media Logo" style="height:55px;width:135px;display:inline-block;margin:0 auto;" />
-              <h2 style="margin:24px 0 0;color:#5686DA;font-size:27px;font-weight:700;">New Contact Form Submission</h2>
+              <h2 style="margin:24px 0 0;color:#808080;font-size:27px;font-weight:700;">New Contact Form Submission</h2>
             </div>
 
             <table style="width:100%;border-collapse:collapse;font-size:15px;color:#333;margin-top:20px;">
@@ -60,7 +60,7 @@ Message: ${message || ''}
             </table>
 
             <div style="text-align:center;margin-top:32px;">
-              <a href="mailto:${email}" style="display:inline-block;background:#5686DA;color:#fff;text-decoration:none;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:bold;box-shadow:0 3px 6px rgba(0,0,0,0.1);">
+              <a href="mailto:${email}" style="display:inline-block;background:#808080;color:#fff;text-decoration:none;padding:12px 28px;border-radius:8px;font-size:15px;font-weight:bold;box-shadow:0 3px 6px rgba(0,0,0,0.1);">
                 Reply to Inquiry
               </a>
             </div>
