@@ -84,14 +84,14 @@ export default function ContactSection() {
   return (
     <section className="relative w-full overflow-hidden bg-black py-34">
       <div className="mx-auto max-w-5xl px-6 md:px-10">
-        <div className="grid grid-cols-1 gap-12 md:grid-cols-2 md:gap-16 lg:gap-24">
+        <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 md:gap-16 lg:gap-24">
           <div className="flex flex-col">
             <h2 className="text-3xl font-bold uppercase leading-tight tracking-tight text-white  sm:text-4xl">
               Have a project
               <br />
               in mind?
             </h2>
-            <p className="mt-6 max-w-md text-base leading-relaxed text-black">
+            <p className="mt-6 max-w-md text-base leading-relaxed text-white">
               Your vision deserves a partner who listens, understands, and
               brings your ideas to life. Together, we create impactful
               experiences through bold ideas and flawless execution.
