@@ -44,7 +44,7 @@ const SERVICES = [
   },
   {
     id: 5,
-    title: "Social Media Marketing ",
+    title: "Social Media Marketing",
     description:
       "We create engaging social media content and marketing campaigns that grow your brand, boost engagement, and connect you with the right audience.",
     dark: false,

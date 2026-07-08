@@ -2,11 +2,13 @@
 
 import { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 const services = [
   "LIVE STREAM",
   "SOCIAL MEDIA",
   "PHOTOGRAPHY & VIDEOS",
   "CORPORATE VIDEOS",
+  "Event Content Production"
 ];
 
 const NAV_LINKS = [
@@ -108,12 +110,12 @@ export default function Footer() {
           <ul className="space-y-2">
             {services.map((s) => (
               <li key={s}>
-                <a
-                  href="#"
+                <Link
+                  href="/#services"
                   className="text-[10px] font-medium  uppercase hover:text-gray-900 hover:translate-x-0.5 inline-block transition-all duration-200"
                 >
                   {s}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
@@ -127,12 +129,12 @@ export default function Footer() {
           <ul className="space-y-2">
             {NAV_LINKS.map((link) => (
               <li key={link.label}>
-                <a
+                <Link
                   href={link.href}
                   className="text-[10px] font-medium tracking-tight   uppercase  relative inline-block hover:translate-x-0.5 transition-all duration-200"
                 >
                   {link.label}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>
