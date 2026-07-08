@@ -120,7 +120,7 @@ export default function ServicesSection() {
           <div className="flex justify-center mt-10">
             <Link
               href="/contact"
-              className="px-6 py-1 rounded-full bg-black text-white text-xs md:text-base font-medium hover:bg-gray-800 transition-colors duration-200"
+              className="px-6 py-3 md:py-1 rounded-full bg-black text-white text-xs md:text-base font-medium hover:bg-gray-800 transition-colors duration-200"
             >
               Get In Touch
             </Link>

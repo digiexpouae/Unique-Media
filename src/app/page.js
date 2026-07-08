@@ -10,7 +10,7 @@ import Footer from "./layout/Footer";
 import ServicesSection from "./components/homepage/ServicesSection";
 export default function Home() {
   return (
-<div className="h-screen w-full">
+<div className="relative overflow-hidden  w-full">
 <Header />
 <HeroSection />
 <AboutSection />
