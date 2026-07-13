@@ -5,27 +5,19 @@ import { useState } from "react";
 const testimonials = [
   {
     quote:
-      "digido studio ability to create a high quality UI is stands out. It's something we placed a premium on. A studio with passionate, professional, fun and full creativity. Recommend!.",
-    name: "Conor Bradley",
-    title: "Senior Marketing, Spotify",
-    avatar: null,
+"Unique Media Solutions delivered exceptional quality from start to finish. Their creativity, professionalism, and passion for what they do are evident in every project. The team's ability to produce visually stunning content exceeded our expectations. Highly recommended."  
+ ,avatar: null,
   },
   {
     quote:
-      "Working with this team transformed our product completely. Their attention to detail and creative vision is unmatched in the industry. Truly a world-class experience.",
-    name: "Sarah Mitchell",
-    title: "Head of Design, Stripe",
-    avatar: null,
+"Working with Unique Media Solutions transformed our production experience. Their attention to detail, creative vision, and commitment to excellence set them apart. Every deliverable was executed with precision, making the entire process seamless and enjoyable."   
+, avatar: null,
   },
   {
-    quote:
-      "From concept to execution, every step felt intentional and precise. They brought our brand to life in ways we hadn't imagined. Absolutely outstanding work.",
-    name: "James Ortega",
-    title: "Creative Director, Notion",
-    avatar: null,
+    quote:"From the initial concept to the final delivery, every stage was handled with care and expertise. The team brought our event to life with creativity and flawless execution, capturing every important moment beautifully. We couldn't have asked for a better partner."  
+, avatar: null,
   },
 ];
-
 export default function TestimonialSlider() {
   const [current, setCurrent] = useState(0);
 
@@ -114,7 +106,7 @@ export default function TestimonialSlider() {
         {/* Right — quote content */}
         <div className="flex-1 flex flex-col gap-8">
           {/* Quote text */}
-          <blockquote className="text-white text-2xl md:text-3xl font-light leading-snug tracking-tight">
+          <blockquote className="text-white text-xl md:text-3xl font-light leading-snug tracking-tight">
             &ldquo;{quote}&rdquo;
           </blockquote>
 
@@ -127,12 +119,12 @@ export default function TestimonialSlider() {
             <div className="flex items-center gap-4">
               {/* Avatar placeholder */}
               <div className="w-11 h-11 rounded-full bg-[#555] flex-shrink-0" />
-              <div>
+              {/* <div>
                 <p className="text-white text-sm font-semibold leading-tight">
                   {name}
                 </p>
                 <p className="text-white/50 text-xs mt-0.5">{title}</p>
-              </div>
+              </div> */}
             </div>
 
             {/* Pagination controls */}
